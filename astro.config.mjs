@@ -1,7 +1,5 @@
-
-import { defineConfig } from 'astro/config'
+import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://marinitx.github.io/aeris',
-  base: 'aeris',
-})
+  base: '/aeris/', // Cambia esto por el nombre de tu repositorio
+});
