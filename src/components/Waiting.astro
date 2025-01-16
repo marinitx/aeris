@@ -3,7 +3,7 @@
 ---
 
 <header>
-	<img src="src/assets/aerislogo.svg" alt="Aeris Logo" width="48">
+	<img src="src/assets/aerislogo.svg" alt="Aeris Logo" class="logo">
 </header>
 <body>
 	<div class="hero">
@@ -35,6 +35,10 @@
 		margin: 0;
 		padding: 0;
 		overflow: hidden;
+	}
+	
+	.logo {
+		width: 48px;
 	}
 
 	.hero {
@@ -167,7 +171,7 @@
 
 	@media (max-width: 480px) {
 		h1 {
-			font-size: 2.5rem;
+			font-size: 2.8rem;
 		}
 		input {
 			max-width: 150px;
@@ -175,5 +179,17 @@
 		.hero {
 			padding: 0px 12px
 		}
+		body {
+			padding: 6px;
+		}
+		.logo {
+			width: 32px;
+		}
+		header {
+			align-items: center;
+			display: flex;
+			justify-content: center;
+		}
+
 	}
 </style>
