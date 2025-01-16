@@ -1,4 +1,6 @@
 ---
+import Bubble from "./Bubble.astro"
+
 
 ---
 
@@ -23,6 +25,7 @@
 			  </div>
 		</span>
 	</form>
+	<Bubble></Bubble>
 	<footer>
 		<p>Made with ♡ by Aeris Team.</p>
 	</footer>
@@ -46,6 +49,7 @@
 		align-items: center;
 		flex-direction: column;
 		justify-content: center;
+		z-index: 2;
 	}
 
 	h1 {
@@ -83,6 +87,8 @@
 		border-radius: 999px;
 		border: 1px solid #321b6627;
 		padding: 6px 25px;
+		z-index: 3;  /* Mismo z-index que input-container */
+		position: relative;  /* Necesario para que el z-index funcione */
 	}
 
 	a {
@@ -100,10 +106,13 @@
 		align-items: center;
 		min-height: 100vh;
 		height: 100%;
+		z-index: 1;  /* Cambiamos de 2 a 1 */
 	}
 
 	.newsletter-container {
 		margin-top: 32px;
+		z-index: 3;  /* Mismo z-index que input-container */
+		position: relative;  /* Necesario para que el z-index funcione */
 	}
 
 	.input-container {
@@ -114,6 +123,8 @@
 		margin-top: 16px;
 		padding: 0;
 		justify-content: center;
+		z-index: 3;  /* Añadimos z-index mayor que las burbujas */
+		position: relative;  /* Necesario para que el z-index funcione */
 	}
 
 	input {
